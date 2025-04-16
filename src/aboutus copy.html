@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Page</title>
+    <link rel="stylesheet" href="aboutus.css">
+</head>
+<body>
+    <!-- Full Page Layout -->
+    <div class="page-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- My Page Circle Button -->
+
+            <div class="circle-btn" onclick="navigateTo('account')">
+              <img src="images/anonymous.jpg" alt="Account" class="circle-image">
+           </div>
+
+            <!-- Sidebar Buttons -->
+            <button class="nav-btn">Quiz</button>
+            <button class="nav-btn">Recommendation</button>
+            <button class="nav-btn">Recipe</button>
+            <button class="nav-btn active">About Us</button>
+        </div>
+
+        <div class="container">
+            <div class="title">
+                <h2>Dishcovery</h2>
+                <h1>ABOUT US</h1>
+            </div>
+
+            <div class="flex-container">
+                <div class="content">
+                    <p>
+                      <b>Welcome to Dishcovery!!</b><br>
+                      <br>
+                      Dive into our interactive quiz to discover personalized food recommendations that suit your taste and preferences. 
+                      Explore a wide variety of dishes and culinary options, carefully curated to inspire your dining experiences. Whether you're looking for new recipes to try or recommendations for exciting restaurants, Dishcovery is here to guide you every step of the way. 
+                      <br>
+                      Enjoy your journey of discovering delicious flavors!
+                    </p>
+                </div>
+                <div class="photo">
+                    <img src="images/groupe.jpg" alt="About Us Image">
+                </div>
+            </div>
+
+            <div class="meetteam">
+                <h1>Meet the Team</h1><br>
+                <div class="member-container">
+                    <div class="member">
+                        <img src="images/amy.png" alt="Amy">
+                        <p>
+                            <b>Amy</b><br>
+                            Project manager<br>
+                            HTML+CSS programmer
+                        </p>
+                    </div>
+                    
+                    <div class="member">
+                        <img src="images/erika.png" alt="Erika">
+                        <p>
+                            <b>Erika</b><br>
+                            HTML+CSS leader<br>
+                            HTML+CSS programmer
+                        </p>
+                    </div>
+            
+                    <div class="member">
+                        <img src="images/dylan.png" alt="Dylan">
+                        <p>
+                            <b>Dylan</b><br>
+                            JavaScript leader<br>
+                            JavaScript coder
+                        </p>
+                    </div>
+            
+                    <div class="member">
+                        <img src="images/airi.png" alt="Airi">
+                        <p>
+                            <b>Airi</b><br>
+                            UI leader<br>
+                            UI designer
+                        </p>
+                    </div>
+            
+                    <div class="member">
+                        <img src="images/Eric.png" alt="Eric">
+                        <p>
+                            <b>Eric</b><br>
+                            UI designer<br>
+                            JavaScript coder
+                        </p>
+                    </div>
+            
+                    <div class="member">
+                        <img src="images/mugu.png" alt="Mugu">
+                        <p>
+                            <b>Mugu</b><br>
+                            JavaScript coder
+                        </p>
+                    </div>
+            
+                    <div class="member">
+                        <img src="images/jerry.png" alt="Jerry">
+                        <p>
+                            <b>Jerry</b><br>
+                            HTML+CSS programmer
+                        </p>
+                    </div>
+            
+                    <div class="member">
+                        <img src="images/sushant.png" alt="Sushant">
+                        <p>
+                            <b>Sushant</b><br>
+                            HTML+CSS programmer
+                        </p>
+                    </div>
+            
+                    <div class="member">
+                        <img src="images/Ty.png" alt="Ty">
+                        <p>
+                            <b>Ty</b><br>
+                            JavaScript coder
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "mission">
+              <br>  
+              <h1>Our Mission</h1><br>
+                <p>Our company aims to provide comprehensive support for university life in Japan, 
+                    including aspects related to daily living and academics. 
+                    We will be launching a variety of products in the near future to make university 
+                    students' lives more enjoyable and convenient.
+                </p>
+                <p>The current website will continue to update with more restaurant information, covering more campuses in Japan.
+                </p>
+                <br>
+            </div>
+            <div class="contact-page-sec">
+              <div class="contact-info-container">
+                  <div class="contact-info">
+                      <h2>Address</h2>
+                      <span>2-150 Iwakura-cho, Ibaraki</span>
+                      <span>Osaka, JAPAN</span>
+                  </div>
+                  <div class="contact-info">
+                      <h2>Email</h2>
+                      <span>Dishcovery@ac.jp.com</span>
+                  </div>
+                  <div class="contact-info">
+                      <h2>Office Time</h2>
+                      <span>Mon - Fri 9:00 am - 4.00 pm</span>
+                  </div>
+              </div>
+      
+              <div class="contact-page-form">
+                  <h2>Get in Touch With Us!</h2>
+                  <form
+                  action="https://formspree.io/f/meoonbjy"
+                  method="POST">
+                      <div class="form-row">
+                          <!-- Form Fields -->
+                          <input type="text" placeholder="Your Name" name="name">
+                          <input type="email" placeholder="Email" name="email">
+                          <input type="text" placeholder="Phone Number" name="phone">
+                          <input type="text" placeholder="Subject" name="subject">
+                          <textarea placeholder="Write Your Message" name="message"></textarea>
+                          <input type="submit" value="Send Now">
+                      </div>
+                  </form>
+              </div>
+          </div>
+        </div>
+    </div>
+
+      <script src="aboutus.js"></script>
+</body>
+</html>

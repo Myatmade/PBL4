@@ -1,0 +1,52 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="loginpage.css">
+</head>
+<body>
+    <div class="backimg">
+        <img src="./loginpage_img/dishmain.jpg" alt="dish">
+    </div>
+
+    <div class="login_container">
+        <h1>Dishcovery</h1>
+        <h2>Nice to see you</h2>
+        <div class="form-container">
+            <!-- Login Form -->
+            <form id="loginForm" class="form active">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <span id="switchToSignup">Sign up</span></p>
+            </form>
+            <!-- Sign Up Form -->
+            <form id="signupForm" class="form">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <!-- Additional Fields for University -->
+                <input type="text" placeholder="University Name" required>
+                <input type="text" placeholder="University Campus" required>
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <span id="switchToLogin">Login</span></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="app_describe">
+        <p>
+            <h3>✔️Food quiz</h3>
+            <h3>✔️Find Good restaurant</h3>
+            <h3>✔️Discover Global Cuisine</h3>
+        </p>
+        <div class="contactus"></div>
+    </div>
+
+    <script src="loginpage.js" defer></script>
+</body>
+</html>

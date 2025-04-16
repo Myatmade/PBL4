@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #F4D9D0; /* Light pink for the background */
+}
+
+.profile-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 400px;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #7E3F51; /* Dark mauve for headings */
+}
+
+p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #5D3A3A; /* Muted brown for text */
+}
+
+form {
+    margin-top: 20px;
+}
+
+form h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #7E3F51; /* Dark mauve for subheadings */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #D3B5B5; /* Soft pink border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #F9F4F4; /* Light grayish-pink for input background */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #D9ABAB; /* Soft pink for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #B88A8A; /* Slightly darker pink for hover effect */
+}
+
+/* Back Button Styling */
+.back-button {
+    width: 25%; /* 1/4 of the container's width */
+    padding: 10px;
+    background: #D9ABAB; /* Soft pink for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+.back-button:hover {
+    background: #B88A8A; /* Slightly darker pink for hover effect */
+}

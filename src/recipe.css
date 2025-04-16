@@ -1,0 +1,304 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+/* Full Page Layout */
+.page-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5e1d9;
+    width: 200px;
+    padding: 20px 10px;
+    height: 100%; /* Full height of the viewport */
+    position: fixed; /* Keep the sidebar fixed */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* My Page Circle Button */
+.circle-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow: hidden; /* Ensure the image stays within the circle */
+    position: relative; /* Positioning context for the image */
+}
+
+.circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire button while maintaining aspect ratio */
+    border-radius: 50%; /* Keep the image circular */
+    display: block; /* Remove bottom space from image */
+}
+
+.circle-btn:hover {
+    background-color: #e2c5be;
+}
+
+/* Sidebar Buttons */
+.nav-btn {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #5b3e70;
+    transition: background-color 0.3s, font-weight 0.3s;
+    border-radius: 5px;
+}
+
+.nav-btn:hover {
+    background-color: #e2c5be;
+}
+
+.nav-btn.active {
+    background-color: #bf7372;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 220px; /* Leave space for the fixed sidebar */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+            background-color: #fff;
+            height: 100vh; /* Full height of the viewport */
+            overflow-y: auto; /* Allow scrolling if content exceeds height */
+}
+
+/* Search Bar */
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Recipe Content Styling */
+.recipe-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.recipe-title {
+    font-size: 24px;
+    color: #5b3e70;
+    margin-bottom: 20px;
+}
+
+.recipe-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #bf7372;
+    margin-bottom: 20px;
+}
+
+.recipe-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.interactions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.interaction-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.interaction-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #bf7372;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    position: relative;
+}
+
+.interaction-checkbox:checked {
+    background-color: #bf7372; 
+    border-color: #bf7372; 
+}
+
+.interaction-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.save-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.save-checkbox {
+    display: none;
+}
+
+.heart {
+    font-size: 24px;
+    color: #fff; /* White when not clicked */
+    -webkit-text-stroke: 1px #bf7372;
+    transition: color 0.3s;
+}
+
+.save-checkbox:checked + .heart {
+    color: #a84b4b; /* Darker shade when checked */
+    -webkit-text-stroke-color: #a84b4b; /* Change border color when checked */
+}
+
+/* Recipe Details and Ingredients Container */
+.recipe-details-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* Recipe Details and Ingredients Container */
+.recipe-details-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    align-items: stretch; /* Ensure both sections stretch to the same height */
+}
+
+.recipe-details, .ingredients {
+    flex: 1; /* Allow both sections to grow equally */
+    text-align: left;
+    padding: 20px;
+    background-color: #f5e1d9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid #bf7372;
+    margin-right: 10px; /* Add margin to separate the two sections */
+}
+
+/* Remove margin from the last section to avoid extra space */
+.recipe-details:last-child,
+.ingredients:last-child {
+    margin-right: 0; /* No margin for the last item */
+}
+
+.recipe-details h3, .ingredients h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #5b3e70;
+}
+
+.recipe-details p, .ingredients ul {
+    margin: 5px 0;
+}
+
+.ingredients ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Recipe */
+.recipe-description {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+    color: #333;
+    background-color: #f5e1d9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid #bf7372;
+}
+
+.recipe-description h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #5b3e70;
+}
+
+.recipe-steps {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.recipe-steps h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #5b3e70;
+}
+
+.recipe-steps .step {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #bf7372;
+    border-radius: 5px;
+}
+
+.recipe-steps .step strong {
+    color: #5b3e70;;
+}
+
+.recipe-steps .step-title {
+    color: #bf7372; 
+    font-weight: bold;
+    display: block;
+}

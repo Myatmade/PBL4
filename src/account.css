@@ -1,0 +1,165 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+/* Full Page Layout */
+.page-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed; /* Fix the sidebar position */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left */
+    height: 100%; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5e1d9;
+    width: 200px; /* Fixed width for sidebar */
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.circle-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow: hidden; /* Ensure the image stays within the circle */
+    position: relative; /* Positioning context for the image */
+}
+
+.circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire button while maintaining aspect ratio */
+    border-radius: 50%; /* Keep the image circular */
+    display: block; /* Remove bottom space from image */
+}
+
+.circle-btn:hover {
+    background-color: #e2c5be;
+    transform: scale(1.1);
+}
+
+.nav-btn {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #5b3e70;
+    transition: background-color 0.3s, font-weight 0.3s;
+    border-radius: 5px;
+}
+
+.nav-btn:hover {
+    background-color: #e2c5be;
+}
+
+.nav-btn.active {
+    background-color: #bf7372;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 220px; /* Add margin to the left to prevent overlap with the sidebar */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff;
+    height: 100vh; /* Set the height to fill the viewport */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #bf7372;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #5b3e70;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #5b3e70;
+}
+
+input[type="file"], select {
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.action-btn {
+    background-color: #bf7372;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #e2c5be;
+    transform: scale(1.05);
+}
+
+.badge {
+    display: inline-block;
+    background-color: #f5e1d9;
+    color: #5b3e70;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: default;
+}
+
+.badge:hover {
+    background-color: #e2c5be;
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+}

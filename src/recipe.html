@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <link rel="stylesheet" href="recipe.css">
+    <style>
+        .interactions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .interaction-btn, .save-btn {
+            background-color: #bf7372;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .interaction-btn:hover, .save-btn:hover {
+            background-color: #a84b4b;
+        }
+
+        .save-btn {
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Full Page Layout -->
+    <div class="page-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- My Page Circle Button -->
+            <div class="circle-btn" onclick="navigateTo('account')">
+                <img src="images/anonymous.jpg" alt="Account" class="circle-image">
+            </div>
+
+            <!-- Sidebar Buttons -->
+            <button class="nav-btn">Quiz</button>
+            <button class="nav-btn">Recommendation</button>
+            <button class="nav-btn active">Recipe</button>
+            <button class="nav-btn">About Us</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <form id ="searchForm">
+                    <input id='search-input' type="text" name="query" placeholder="Search our recipe!" required>
+                </form>
+            </div>
+
+            <!-- Recipe Content -->
+            <div class="recipe-content" id = "recipe-content">
+                <h1 class="recipe-title">Recipe of the Week!</h1>
+                <h2 class="recipe-name">Mapo Tofu</h2>
+                <div class="recipe-image">
+                    <img src="images/MapoTofu.jpg" alt="Mapo Tofu">
+                </div>
+                <div class="interactions">
+                    <label class="save-label">
+                        <input type="checkbox" class="save-checkbox">
+                        <span class="heart">&#10084;</span> <!-- Heart shape -->
+                    </label>
+                    <label class="interaction-label">
+                        <input type="checkbox" class="interaction-checkbox">
+                        I made it!
+                    </label>
+                </div>
+
+                <!-- Recipe Details and Ingredients Container -->
+                <div class="recipe-details-container">
+                    <!-- Recipe Details -->
+                    <div class="recipe-details">
+                        <h3>Recipe Details</h3>
+                        <div class="prep-details">
+                            <p><strong>Prep Time:</strong> 15 mins</p>
+                            <p><strong>Cook Time:</strong> 20 mins</p>
+                            <p><strong>Total Time:</strong> 35 mins</p>
+                            <p><strong>Servings:</strong> 4</p>
+                        </div>
+                    </div>
+
+                    <!-- Ingredients -->
+                    <div class="ingredients">
+                        <h3>Ingredients</h3>
+                        <ul>
+                            <li>1 block of tofu (firm, cubed)</li>
+                            <li>200g ground pork</li>
+                            <li>2 tbsp doubanjiang (fermented bean paste)</li>
+                            <li>1 tbsp soy sauce</li>
+                            <li>1 tbsp sesame oil</li>
+                            <li>2 garlic cloves (minced)</li>
+                            <li>1 tsp ginger (minced)</li>
+                            <li>1 tsp cornstarch (mixed with water)</li>
+                            <li>1/2 cup chicken broth</li>
+                            <li>1 tsp Sichuan peppercorns (optional, for spice)</li>
+                            <li>Green onions (for garnish)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Recipe Description -->
+                <div class="recipe-description">
+                    <h3>Description</h3>
+                    <p>Mapo Tofu is a popular Sichuan dish celebrated for its bold flavors, rich sauce, and numbing heat from Sichuan peppercorns. The combination of silky tofu and savory pork in a spicy sauce creates a dish that’s perfect for any occasion!</p>
+                </div>
+
+                <!-- Recipe Steps -->
+                <div class="recipe-steps">
+                    <h3>Step-by-Step Instructions</h3>
+                    <div class="step"><strong>Step 1 <span class="step-title">Prepare the tofu:</span></strong> Cut the block of tofu into small, bite-sized cubes. Boil water in a pot, add a pinch of salt, and gently simmer the tofu cubes for 2-3 minutes to firm them up. Drain and set aside.</div>
+                    <div class="step"><strong>Step 2 <span class="step-title">Toast the Sichuan peppercorns:</span></strong> If using Sichuan peppercorns, toast them in a dry pan over medium heat for 1-2 minutes until aromatic. Grind them into a fine powder and set aside.</div>
+                    <div class="step"><strong>Step 3 <span class="step-title">Cook the pork:</span></strong> Heat a wok or large frying pan over medium-high heat. Add the sesame oil, then stir-fry the ground pork until browned and fully cooked. Remove and set aside.</div>
+                    <div class="step"><strong>Step 4 <span class="step-title">Sauté aromatics:</span></strong> In the same pan, add minced garlic and ginger. Stir-fry for 1 minute until fragrant.</div>
+                    <div class="step"><strong>Step 5 <span class="step-title">Add doubanjiang:</span></strong> Stir in the doubanjiang (fermented bean paste). Cook for 1-2 minutes to release its flavor and red color.</div>
+                    <div class="step"><strong>Step 6 <span class="step-title">Combine ingredients:</span></strong> Return the cooked pork to the pan. Add chicken broth, soy sauce, and the tofu cubes. Gently mix to coat the tofu with the sauce.</div>
+                    <div class="step"><strong>Step 7 <span class="step-title">Thicken the sauce:</span></strong> Mix cornstarch with water to create a slurry. Slowly pour the slurry into the pan while stirring. Simmer until the sauce thickens and coats the tofu evenly.</div>
+                    <div class="step"><strong>Step 8 <span class="step-title">Season and garnish:</span></strong> Add the ground Sichuan peppercorns (if using) and adjust salt levels as needed. Garnish with chopped green onions before serving.</div>
+                    <div class="step"><strong>Step 9 <span class="step-title">Serve:</span></strong> Transfer the Mapo Tofu to a serving dish. Serve hot with steamed rice or as a side dish to other Chinese-inspired meals.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="recipe.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Page</title>
+    <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6">
+    </script>
+    <link rel="stylesheet" href="recommendation.css">
+</head>
+<body>
+    <!-- Full Page Layout -->
+    <div class="page-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- My Page Circle Button -->
+            <div class="circle-btn" onclick="navigateTo('account')">
+                <img src="images/anonymous.jpg" alt="Account" class="circle-image">
+            </div>
+
+            <!-- Sidebar Buttons -->
+            <button class="nav-btn">Quiz</button>
+            <button class="nav-btn active">Recommendation</button>
+            <button class="nav-btn">Recipe</button>
+            <button class="nav-btn">About Us</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <form id="search_bar_form">
+                    <input type="text" placeholder="Search our recipe!" id="search_bar_input">
+                    <button type="submit" hidden></button>
+                </form>
+            </div>
+
+            <!-- Dropdown Menus -->
+            <div class="categories">
+                <div class="category-btn-container">
+                    <button class="category-btn" data-dropdown="region" id="region_button">Region</button>
+                </div>
+                <div class="category-btn-container">
+                    <button class="category-btn" data-dropdown="student-discount" id="discount_button">Student Discount</button>
+                </div>
+                <div class="category-btn-container">
+                    <button class="category-btn" data-dropdown="flavor" id="flavor_button">Flavor</button>
+                </div>
+                <div class="category-btn-container">
+                    <button class="category-btn" data-dropdown="dietary-preference" id="diet_button">Dietary Preference</button>
+                </div>
+            </div>  
+
+            <!-- The list of recipes returned by the API call -->
+            <ul id="recipe-list"></ul>
+                <!-- List of recipe is returned here, created dynamically by JS-->
+                <!-- THIS ONE AMY, THIS IS THE  LIST OF RECIPE!!!!!!-->
+                <!-- Example of a recipe: --> 
+                <!-- <li>
+                        <a class="recipeListClass">Spicy Lemongrass Soup</a>
+                    </li> -->
+            <!-- Google Map Section -->
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <!-- Link to JS File -->
+    <script>
+      (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+        key: "AIzaSyAMKXF7eum0tR_B1z_PMV6ZMMyTnqhN5xE",
+        v: "weekly",
+        // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+        // Add other bootstrap parameters as needed, using camel case.
+      });
+    </script>
+    <script src="recommendation.js" defer></script>
+</body>
+</html>

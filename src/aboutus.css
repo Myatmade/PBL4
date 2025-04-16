@@ -1,0 +1,289 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Full Page Layout */
+.page-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* Use min-height for scrolling */
+    background-color: #fafafa;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5e1d9;
+    width: 200px; /* Fixed width for sidebar */
+    padding: 20px 10px;
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Fix the sidebar in place */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* My Page Circle Button */
+.circle-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow: hidden; /* Ensure the image stays within the circle */
+    position: relative; /* Positioning context for the image */
+}
+
+.circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire button while maintaining aspect ratio */
+    border-radius: 50%; /* Keep the image circular */
+    display: block; /* Remove bottom space from image */
+}
+
+.circle-btn:hover {
+    background-color: #e2c5be;
+    transform: scale(1.1);
+}
+/* Sidebar Buttons */
+.nav-btn {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #5b3e70;
+    transition: background-color 0.3s, font-weight 0.3s;
+    border-radius: 5px;
+}
+
+.nav-btn:hover {
+    background-color: #e2c5be;
+}
+
+.nav-btn.active {
+    background-color: #bf7372;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/* Content */
+.container {
+    margin-left: 220px; /* Sidebar width */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto; /* Enable vertical scrolling only when content exceeds the viewport */
+}
+
+
+/* Title */
+.title {
+    position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+    background-image: url('images/teamwork.jpg'); /* Set your background image here */
+    background-size: cover; /* Scale the image to cover the entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 200px; /* Set a height for the title section */
+    text-align: center;
+    color: white; /* Text color */
+    padding: 20px 0; /* Add padding for spacing */
+    overflow: hidden; /* Prevent overflow */
+    flex-shrink: 0; /* Prevent the title from shrinking */
+}
+
+/* Rest of the styles remain unchanged */
+
+.title::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Cover the top */
+    left: 0; /* Cover the left */
+    right: 0; /* Cover the right */
+    bottom: 0; /* Cover the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: 1; /* Position it above the background but below the text */
+}
+
+.title h2, .title h1 {
+    position: relative; /* Position relative to ensure text appears above the overlay */
+    z-index: 2; /* Ensure text is above the overlay */
+    color: white; /* Explicitly set text color to white */
+}
+
+.title h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5em; /* Adjust font size as needed */
+}
+
+.title h1 {
+    margin: 10px 0 0; /* Add margin to separate from h2 */
+    font-size: 2.5em; /* Adjust font size as needed */
+}
+
+.flex-container {
+    display: flex; /* Horizontal layout for content and photo */
+    flex: 1;
+}
+
+.content, .photo {
+    flex: 1; /* Take up remaining space */
+    padding: 50px;
+    text-align: center;
+}
+
+.content {
+    background-color: #f1dada; /* Optional: Add background color */
+}
+
+.content p{
+    margin-top: 20%;
+    font-size: 20px;
+}
+
+.photo {
+    background-color: #f1dada; /* Optional: Add background color */
+}
+
+.photo img {
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.meetteam {
+    padding: 20px; /* Add some padding around the team section */
+}
+
+.meetteam h1 {
+    text-align: center;
+    color: #5b3e70;
+    font-size: 30px;
+}
+
+/* Flex container for team members */
+.member-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.member:hover {
+    transform: scale(1.05);
+}
+
+.member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.member p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+.mission{
+    background-color: #e2c5be;
+}
+.mission h1{
+    text-align: center;
+    color: #5b3e70;
+    font-size: 30px;
+}
+.mission p{
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Contact Section Styling */
+.contact-page-sec {
+    padding: 50px 20px;
+    background-color: #fafafa;
+    margin-top: 20px;
+}
+
+.contact-info-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.contact-info {
+    width: 30%;
+    background: #e2c5be;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-page-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-page-form input,
+.contact-page-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-page-form input[type="submit"] {
+    background-color: #bf7372;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.contact-page-form input[type="submit"]:hover {
+    background-color: #5b3e70;
+}
+
+/* Flexbox for Contact Info */
+.contact-info h2 {
+    color: #5b3e70;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-info span {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #040404;
+}

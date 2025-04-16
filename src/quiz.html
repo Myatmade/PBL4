@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishcovery Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>QUIZ TIME!</h1>
+            <!-- <h2 class="sub-title">DISHCOVERY</h2> -->
+        </div>
+        <div class="quiz-box">
+            <img src="https://via.placeholder.com/300x200" alt="Food Image" class="quiz-image" id="foodImage">
+            <form>
+                <label for="food">What food is this?</label>
+                <input type="text" id="food" name="food" placeholder="Type here!">
+
+                <label for="origin">Where is this from?</label>
+                <input type="text" id="origin" name="origin" placeholder="Type here!">
+                
+                <div class="button-container">
+                    <button type="button" id="skipQuiz" class="skip-btn">Skip Quiz &#9654;</button>
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="button" id="recommendationBtn" class="recommend-btn" hidden>Recommendation</button>
+                </div>
+            </form>
+        </div>
+        <!-- Display result here -->
+        <div id="result"></div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>

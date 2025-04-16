@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex; /* Use flexbox to center the content */
+    justify-content: left; /* Center horizontally */
+    align-items: left; /* Center vertically */
+}
+
+.backimg {
+    position: relative;
+    width: 33.3%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent overflow */
+    z-index: 1;
+}
+
+.backimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; 
+    top: 0;
+    left: 0; 
+}
+
+.login_container {
+    position: relative; /* Keep it relative for z-index */
+    width: 400px; /* Fixed width for the container */
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    z-index: 2; /* Ensure it appears above the background */
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Comforter', cursive;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+}
+
+.form-container {
+    position: relative;
+}
+
+.form {
+    display: none; /* Hide all forms by default */
+}
+
+.form.active {
+    display: block; /* Show active form */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background: #ae445A;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background: #992d4f;
+}
+
+p {
+    text-align: center;
+}
+
+p span {
+    color: #4B4376;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.app_describe {
+    position: relative; /* Position relative to allow stacking */
+    text-align: left; /* Center text */
+    margin-top: 200px;
+    margin-left: 25px;
+}

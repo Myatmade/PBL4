@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Your Profile</h1>
+        <div id="profileInfo">
+            <!-- User's Information -->
+            <p><strong>Username:</strong> <span id="username"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>University Name:</strong> <span id="universityName"></span></p>
+            <p><strong>University Campus:</strong> <span id="universityCampus"></span></p>
+        </div>
+
+        <!-- Update Forms -->
+        <h2>Update Your Information</h2>
+
+        <form id="updateUsernameForm">
+            <h3>Change Username</h3>
+            <input type="text" placeholder="New Username" required id="newUsername">
+            <button type="submit">Update Username</button>
+        </form>
+
+        <form id="updateEmailForm">
+            <h3>Change Email</h3>
+            <input type="email" placeholder="New Email" required id="newEmail">
+            <button type="submit">Update Email</button>
+        </form>
+
+        <form id="updatePasswordForm">
+            <h3>Change Password</h3>
+            <input type="password" placeholder="New Password" required id="newPassword">
+            <button type="submit">Update Password</button>
+        </form>
+
+        <form id="updateUniversityForm">
+            <h3>Change University Information</h3>
+            <input type="text" placeholder="New University Name" required id="newUniversityName">
+            <input type="text" placeholder="New University Campus" required id="newUniversityCampus">
+            <button type="submit">Update University</button>
+        </form>
+
+        <!-- Back to Account Button -->
+        <button id="backToAccount" class="back-button" style="margin-top: 10px;">&lt; Back to Account</button>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

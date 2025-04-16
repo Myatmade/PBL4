@@ -1,0 +1,248 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+/* Full Page Layout */
+.page-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5e1d9;
+    width: 200px; /* Fixed width for sidebar */
+    padding: 20px 10px;
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Fix the sidebar in place */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* My Page Circle Button */
+.circle-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow: hidden; /* Ensure the image stays within the circle */
+    position: relative; /* Positioning context for the image */
+}
+
+.circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire button while maintaining aspect ratio */
+    border-radius: 50%; /* Keep the image circular */
+    display: block; /* Remove bottom space from image */
+}
+
+.circle-btn:hover {
+    background-color: #e2c5be;
+    transform: scale(1.1);
+}
+
+/* Sidebar Buttons */
+.nav-btn {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #5b3e70;
+    transition: background-color 0.3s, font-weight 0.3s;
+    border-radius: 5px;
+}
+
+.nav-btn:hover {
+    background-color: #e2c5be;
+}
+
+.nav-btn.active {
+    background-color: #bf7372;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Main Content Area */
+.main-content {
+     flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 220px; /* Space for the fixed sidebar */
+    background-color: #fff;
+}
+
+/* Search Bar */
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+
+/* Category Buttons */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background: linear-gradient(135deg, #f5e1d9, #e2c5be); /* Gradient background */
+    color: #5b3e70;
+    border: none;
+    width: 150px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    border-radius: 12px; /* More rounded corners */
+    font-weight: bold;
+    cursor: pointer;
+    position: relative; /* For hover effect */
+    overflow: hidden; /* To contain the shadow */
+    transition: transform 0.2s, box-shadow 0.3s; /* Smooth transition for hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+}
+
+.category-btn:hover {
+    transform: translateY(-4px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+/* Optional: Add a subtle text shadow */
+.category-btn:active {
+    transform: translateY(1px); /* Slightly lower on click */
+}
+/* Google Map Section */
+html,
+#map {
+  height: 95%;
+  margin: 0;
+  padding: 0px;
+  aspect-ratio: 16/9;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Ensure no overflow */
+}
+
+.recipeListClass {
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    background-color: #f5e1d9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    position: absolute;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-btn-container {
+    position: relative; /* Ensures dropdown is positioned relative to the button */
+    display: inline-block; /* Keep button and dropdown aligned */
+}
+
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: calc(100% + 5px); /* Below the button */
+    left: 50%; /* Center under the button */
+    transform: translateX(-50%);
+    background-color: #f5e1d9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 5px 10px;
+    margin: 2px 0;
+    list-style: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #e2c5be; /* Slightly darker pink on hover */
+}
+
+/* Recipe List Styling */
+/* Recipe List Styling */
+/* Recipe List Styling */
+#recipe-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px; /* Add some top margin */
+}
+
+/* Recipe Card Styling */
+.recipe-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    padding: 15px; /* Add padding for better spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between title and button */
+    height: 150px; /* Fixed height for consistent card sizes */
+}
+
+/* Recipe Title */
+.recipe-title {
+    font-size: 20px; /* Slightly larger title */
+    font-weight: bold;
+    color: #333;
+    margin: 0; /* Remove margin */
+}
+
+/* Add a button for more actions */
+.recipe-button {
+    background-color: #bf7372;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+.recipe-button:hover {
+    background-color: #e2c5be;
+}

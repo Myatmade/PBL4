@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    <link rel="stylesheet" href="account.css">
+    <script src="account.js" defer></script>
+</head>
+<body>
+    <!-- Full Page Layout -->
+    <div class="page-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- My Page Circle Button -->
+            <div class="circle-btn" onclick="navigateTo('account')">
+                <img src="images/anonymous.jpg" alt="Account" class="circle-image">
+            </div>
+            <!-- Sidebar Buttons -->
+            <button class="nav-btn">Quiz</button>
+            <button class="nav-btn">Recommendation</button>
+            <button class="nav-btn">Recipe</button>
+            <button class="nav-btn">About Us</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1 class="title">Account</h1>
+
+            <!-- Profile Information -->
+            <section class="profile-info">
+                <h2>Profile Information</h2>
+                <p><strong>Username:</strong> JohnDoe123</p>
+                <p><strong>Email:</strong> john.doe@email.com</p>
+                <p><strong>University Name:</strong> Ritsumeikan University</p>
+                <p><strong>University Campus:</strong> OIC campus</p>
+                <button class="action-btn">Edit Profile</button>
+            </section>
+
+            <!-- Food Preferences -->
+            <section class="preferences">
+                <h2>Food Preferences</h2>
+                <form>
+                    <label for="region">Region:</label>
+                    <select id="region">
+                        <option>Asia</option>
+                        <option>Europe</option>
+                    </select>
+
+                    <label for="discount">Student Discount:</label>
+                    <select id="discount">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+
+                    <label for="flavor">Flavor:</label>
+                    <select id="flavor">
+                        <option>Spicy</option>
+                        <option>Non-Spicy</option>
+                    </select>
+
+                    <label for="diet">Dietary Preference:</label>
+                    <select id="diet">
+                        <option>Non-Vegan</option>
+                        <option>Vegan</option>
+                    </select>
+
+                    <button class="action-btn" id="save_preferences">Save Preferences</button>
+                </form>
+            </section>
+
+            <!-- Rewards & Badges -->
+            <section class="rewards">
+                <h2>Rewards & Badges</h2>
+                <div class="badge">Spice Master</div>
+                <div class="badge">Foodie Explorer</div>
+                <div class="badge">Quiz Champion</div>
+                <div class="badge">Healthy Eater</div>
+            </section>
+
+            <!-- Logout Button -->
+            <button class="action-btn" id="logout" style="margin-top: 10px; margin-left: 0;">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        // Logout functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const logoutButton = document.getElementById("logout");
+            logoutButton.addEventListener("click", () => {
+                // Remove the logged-in user from localStorage
+                localStorage.removeItem("loggedInUser");
+                alert("You have been logged out.");
+                // Redirect to the login page
+                window.location.href = "loginpage.html";
+            });
+        });
+    </script>
+</body>
+</html>
